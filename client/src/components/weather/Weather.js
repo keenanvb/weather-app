@@ -40,7 +40,7 @@ const Weather = ({ weather: { current, forcast, loading }, getWeatherCurrentData
                             </div>
                         </div>
                         <div className="weather-container">
-                            <img className="weather-icon" src={`http://openweathermap.org/img/w/${current.weather[0].icon}.png`}></img>
+                            <img className="weather-icon" src={`https://openweathermap.org/img/w/${current.weather[0].icon}.png`}></img>
                             <div className="weather-temp">{CtoF(current.main.temp, flag)}</div>
                             <div className="weather-desc">
                                 {current.weather[0].main}:
@@ -80,7 +80,7 @@ const Weather = ({ weather: { current, forcast, loading }, getWeatherCurrentData
                                             {forcast.list.map((weather, index) => {
                                                 return (
                                                     <li key={index}>
-                                                        <img className="day-icon" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}></img>
+                                                        <img className="day-icon" src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}></img>
                                                         <span className="day-name">{moment(weather.dt * 1000).format('ddd')}</span>
                                                         <span className="day-temp-max">{CtoF(weather.temp.max, flag)}</span>
                                                         <span className="day-temp-min">{CtoF(weather.temp.min, flag)}</span>
